@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard RH - Simples</title>
+  <link rel="stylesheet" href="css/estilo.css" />
+</head>
+<body id="pagina-dashboard">
+  <header class="topo">
+    <h1>Dashboard RH</h1>
+    <nav>
+      <a href="index.html" class="ativo">Dashboard</a>
+      <a href="funcionarios.html">Funcionários</a>
+      <a href="cadastro.html">Cadastrar</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="cartoes">
+      <div class="cartao">
+        <h3>Total</h3>
+        <p id="card-total">0</p>
+      </div>
+      <div class="cartao">
+        <h3>Média salarial</h3>
+        <p id="card-media">R$ 0,00</p>
+      </div>
+      <div class="cartao">
+        <h3>Maior salário</h3>
+        <p id="card-maior">R$ 0,00</p>
+      </div>
+      <div class="cartao">
+        <h3>Menor salário</h3>
+        <p id="card-menor">R$ 0,00</p>
+      </div>
+    </section>
+
+    <section class="info">
+      <p>Use o menu para cadastrar e gerenciar funcionários. Tudo salvo no seu navegador.</p>
+    </section>
+  </main>
+
+  <script src="js/armazenamento.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cadastrar Funcionário</title>
+  <link rel="stylesheet" href="css/estilo.css" />
+</head>
+<body id="pagina-cadastro">
+  <header class="topo">
+    <h1>Cadastrar Funcionário</h1>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="funcionarios.html">Funcionários</a>
+      <a href="cadastro.html" class="ativo">Cadastrar</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <form id="formFuncionario" class="form">
+      <input id="nome" placeholder="Nome completo" required />
+      <input id="idade" placeholder="Idade" type="number" required />
+      <input id="cargo" placeholder="Cargo" required />
+      <input id="salario" placeholder="Salário (ex: 2500)" type="number" required />
+      <div class="acoes">
+        <button id="btnSalvar" type="submit">Salvar</button>
+        <button id="btnCancelar" type="button">Cancelar</button>
+      </div>
+      <input type="hidden" id="idEdicao" />
+    </form>
+  </main>
+
+  <script src="js/armazenamento.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
