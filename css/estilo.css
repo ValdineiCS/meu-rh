@@ -14,7 +14,18 @@ body{
   background: linear-gradient(180deg,#0f0b16 0%, #180f27 100%);
   color:var(--text);
   -webkit-font-smoothing:antialiased;
+  opacity:0;
+  transform: translateY(10px);
+  animation: fadeInPage .5s ease forwards;
 }
+
+@keyframes fadeInPage{
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .topo{
   display:flex;
   align-items:center;
@@ -60,6 +71,25 @@ background:var(--card);
 padding:14px;
 border-radius:10px;
 box-shadow:0 6px 18px rgba(0,0,0,0.4);
+animation: cardPop .6s ease forwards;
+transform: scale(.95);
+opacity: 0;
+}
+
+@keyframes cardPop{
+  to{
+    transform:  scale(1);
+    opacity: 1;
+  }
+}
+.cartao:nth-child(1){ animation-delay: .05s; }
+.cartao:nth-child(2){ animation-delay: .15s; }
+.cartao:nth-child(3){ animation-delay: .25s; }
+.cartao:nth-child(4){ animation-delay: .35s; }
+
+.cartao:hover{
+  transform: translatey(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.45);
 }
 
 .cartao h3{
@@ -71,7 +101,6 @@ font-size:13px;
 margin:6px 0 0;
 font-size:20px;
 color:var(--text);
-transition: 0.6s;
 }
 
 /* filtros e tabela */
@@ -108,6 +137,18 @@ width:100%;
 border-collapse:collapse;
 
 }
+
+tr{
+  opacity: 0;
+  transform: translateY(6px);
+  animation: rowFade .35 ease forwards;
+}
+@keyframes rowFade{
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 thead th{ 
 text-align:left;
 padding:10px;
@@ -118,11 +159,31 @@ tbody td{
 padding:10px;
 border-top:1px solid rgba(255,255,255,0.03);
 }
+
+button{
+  transition: transform .15s ease, opacity .15s ease;
+}
+button:hover{
+  transform: scale(1.04);
+}
+button:active{
+  transform: scale(0.96);
+  opacity: .7;
+}
 button.acao{
 padding:6px 8px;
 border-radius:6px;
 border:0;cursor:pointer;
 margin-right:6px;
+}
+button.acao:active{
+  animation: clickPulse .2s ease;
+}
+
+@keyframes clickPulse{
+  50%{
+    transform: scale(1.08);
+  }
 }
 button.editar{
 background:#ffc857;
@@ -139,7 +200,16 @@ padding:18px;
 border-radius:10px;
 display:flex;
 flex-direction:column;
-gap:10px
+gap:10px;
+opacity: 0;
+transform: translateY(10px);
+animation: formEnter .45s ease forwards;
+}
+@keyframes formEnter{
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .form input{
 padding:10px;
@@ -167,6 +237,17 @@ color:var(--text);
 border-radius:8px;
 cursor:pointer;
 }
+.pageExit {
+  animation: fadeOut .3s ease forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
 
 /* responsivo */
 @media (max-width:900px){
