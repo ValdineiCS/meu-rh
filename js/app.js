@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
       form.reset();
     });
 
+
     // cancelar volta para lista
     const btnCancelar = document.getElementById('btnCancelar');
     if(btnCancelar) btnCancelar.addEventListener('click', () => {

@@ -237,16 +237,6 @@ color:var(--text);
 border-radius:8px;
 cursor:pointer;
 }
-.pageExit {
-  animation: fadeOut .3s ease forwards;
-}
-
-@keyframes fadeOut {
-  to {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-}
 
 
 /* responsivo */
