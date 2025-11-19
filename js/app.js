@@ -75,3 +75,4 @@ document.addEventListener('DOMContentLoaded', () => {
     if(document.body.id === 'pagina-funcionarios') listarFuncionariosTela();
   });
 });
+
